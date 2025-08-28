@@ -1,17 +1,16 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>ELYSIE AESTHETICS</title>
-    <link rel="icon" type="image/jpg" href="{% static 'img/page-2.jpg' %}">
+    <link rel="icon" type="image/jpg" href="static/img/page-2.jpg">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+    <link href="static/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,54 +20,60 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'js/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="static/js/bootstrap.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 </head>
 <!-- Topbar Start -->
-<div class="container-fluid bg-light d-none d-lg-block">
+<div class="container-fluid bg-light d-none d-lg-block border-bottom shadow-sm">
     <div class="row py-2 px-lg-5">
+        <!-- Left Side -->
         <div class="col-lg-6 text-left mb-2 mb-lg-0">
-            <div class="d-inline-flex align-items-center">
-                <small><i class="fa fa-phone-alt mr-2"></i>+91-9719966289</small>
-                <small class="px-3">|</small>
-                <small><i class="fa fa-envelope mr-2"></i>elysieaesthetics@gmail.com</small>
+            <div class="d-inline-flex align-items-center text-dark small">
+                <span class="mr-3">
+                    <i class="fa fa-phone-alt mr-2 text-primary"></i> +91-9205983794
+                </span>
+                <span>
+                    <i class="fa fa-envelope mr-2 text-primary"></i> elysieaesthetics@gmail.com
+                </span>
             </div>
         </div>
+
+        <!-- Right Side -->
         <div class="col-lg-6 text-right">
             <div class="d-inline-flex align-items-center">
-                <a class="text-primary px-2" href="">
+                <a class="px-2" href="" style="color:#3b5998;">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="text-primary px-2" href="">
+                <a class="px-2" href="" style="color:#1da1f2;">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="text-primary px-2" href="">
+                <a class="px-2" href="" style="color:#0077b5;">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a class="text-primary px-2"
-                    href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
-                    target="_blank" rel="noopener noreferrer">
+                <a class="px-2" href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer" style="color:#e1306c;">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="text-primary pl-2" href="">
+                <a class="pl-2" href="" style="color:#ff0000;">
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Topbar End -->
 
 <!-- Navbar Start -->
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="{% url 'homepage' %}" class="navbar-brand d-flex align-items-center">
-            <img src="{% static 'img/page-2.jpg' %}" alt="Company Logo"
+        <a href="{% url 'homepage" class="navbar-brand d-flex align-items-center">
+            <img src="static/img/page-2.jpg" alt="Company Logo"
                 style="border-radius: 6px; max-width: 100%;height: 60px; width: auto; margin-right: 10px ;">
             <h1 class="m-0 text-primary">
                 <span class="text-dark">Elysie</span> Aesthetics
@@ -80,12 +85,14 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
             <div class="navbar-nav m-auto py-0">
-                <a href="{% url 'homepage' %}"
-                    class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
-                <!-- <a href="{% url 'aboutUs' %}" class="nav-item nav-link">About</a> -->
-                <a href="{% url 'products' %}"
-                    class="nav-item nav-link {% if request.path == '/products/' %}active{% endif %}">Products</a>
-                <a href="{% url 'contacts' %}" class="nav-item nav-link ">Contacts</a>
+                <!-- <a href="{% url 'homepage" class="nav-item nav-link {% if request.path == '/active{% endif %}">Home</a>
+                <a href="{% url 'products"class="nav-item nav-link {% if request.path == '/products/active{% endif %}">Products</a>
+                <a href="{% url 'contacts" class="nav-item nav-link ">Contacts</a> -->
+
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="products.html" class="nav-item nav-link active">Products</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+
             </div>
         </div>
     </nav>
@@ -220,10 +227,10 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="{% static 'img/bubblefoam.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/bubblefoam.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="{% static 'img/bubb2.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/bubb2.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                             </div>
                         </div>
@@ -249,10 +256,10 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="{% static 'img/drawing1.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/drawing1.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="{% static 'img/drawing2.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/drawing2.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                             </div>
                         </div>
@@ -277,10 +284,10 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="{% static 'img/sd_control.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/sd_control.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="{% static 'img/sdcontrol1.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/sdcontrol1.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                             </div>
                         </div>
@@ -305,10 +312,10 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="{% static 'img/cooling_gel.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/cooling_gel.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="{% static 'img/cooling_gel1.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/cooling_gel1.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                             </div>
                         </div>
@@ -342,7 +349,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="{% static 'img/gfcell1.jpg' %}" class="img-fluid shadow"
+                                <img src="static/img/gfcell1.jpg" class="img-fluid shadow"
                                     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
@@ -376,7 +383,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="{% static 'img/gfcell2.jpg' %}" class="img-fluid shadow"
+                                <img src="static/img/gfcell2.jpg" class="img-fluid shadow"
                                     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
@@ -406,7 +413,7 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="{% static 'img/gfcell_h1.jpg' %}" class="img-fluid shadow"
+                                <img src="static/img/gfcell_h1.jpg" class="img-fluid shadow"
                                     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
@@ -441,7 +448,7 @@
                             </div>
                             <div class="col-lg-5 text-center">
                                 {% load static %}
-                                <img src="{% static 'img/gfcell_h2.jpg' %}" class="img-fluid shadow"
+                                <img src="static/img/gfcell_h2.jpg" class="img-fluid shadow"
                                     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
@@ -472,10 +479,10 @@
                                 <div class="animatedImageSlider"
                                     style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                    <img src="{% static 'img/t4.jpg' %}" class="img-fluid slider-img"
+                                    <img src="static/img/t4.jpg" class="img-fluid slider-img"
                                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                    <img src="{% static 'img/totalcare.jpg' %}" class="img-fluid slider-img"
+                                    <img src="static/img/totalcare.jpg" class="img-fluid slider-img"
                                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                                 </div>
 
@@ -501,7 +508,7 @@
                             </div>
                             {% load static %}
                             <div class="col-lg-5 text-center">
-                                <img src="{% static 'img/mask.jpeg' %}" class="img-fluid shadow"
+                                <img src="static/img/mask.jpeg" class="img-fluid shadow"
                                     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
 
@@ -538,13 +545,13 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="{% static 'img/rej3.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/rej3.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="{% static 'img/rej2.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/rej2.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
 
-                                <img src="{% static 'img/rej4.jpeg' %}" class="img-fluid slider-img"
+                                <img src="static/img/rej4.jpeg" class="img-fluid slider-img"
                                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
 
                             </div>
@@ -582,13 +589,13 @@
                                 <div class="animatedImageSlider"
                                     style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                    <img src="{% static 'img/white.jpeg' %}" class="img-fluid slider-img"
+                                    <img src="static/img/white.jpeg" class="img-fluid slider-img"
                                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                    <img src="{% static 'img/white2.jpeg' %}" class="img-fluid slider-img"
+                                    <img src="static/img/white2.jpeg" class="img-fluid slider-img"
                                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
 
-                                    <img src="{% static 'img/white3.jpeg' %}" class="img-fluid slider-img"
+                                    <img src="static/img/white3.jpeg" class="img-fluid slider-img"
                                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
 
                                 </div>
@@ -703,30 +710,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
     <!-- Local Libraries served via Django static -->
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
-    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
-    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/counterup/counterup.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
 
 
 
     {% load static %}
 
     <!-- Contact Javascript File -->
-    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
-    <script src="{% static 'mail/contact.js' %}"></script>
+    <script src="static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="static/mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="static/js/main.js"></script>
 
 
     {% load static %}
     <script>
-        const STATIC_URL = "{% static '' %}";
+        const STATIC_URL = "static/";
 
         const productData = {
             product1: {
@@ -786,5 +793,6 @@
 
 
 </body>
+
 
 </html>
