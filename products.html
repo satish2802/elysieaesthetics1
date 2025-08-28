@@ -1,0 +1,790 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ELYSIE AESTHETICS</title>
+    <link rel="icon" type="image/jpg" href="{% static 'img/page-2.jpg' %}">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'js/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<!-- Topbar Start -->
+<div class="container-fluid bg-light d-none d-lg-block">
+    <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-left mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center">
+                <small><i class="fa fa-phone-alt mr-2"></i>+91-9719966289</small>
+                <small class="px-3">|</small>
+                <small><i class="fa fa-envelope mr-2"></i>elysieaesthetics@gmail.com</small>
+            </div>
+        </div>
+        <div class="col-lg-6 text-right">
+            <div class="d-inline-flex align-items-center">
+                <a class="text-primary px-2" href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="text-primary px-2" href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-primary px-2" href="">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="text-primary px-2"
+                    href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="text-primary pl-2" href="">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="{% url 'homepage' %}" class="navbar-brand d-flex align-items-center">
+            <img src="{% static 'img/page-2.jpg' %}" alt="Company Logo"
+                style="border-radius: 6px; max-width: 100%;height: 60px; width: auto; margin-right: 10px ;">
+            <h1 class="m-0 text-primary">
+                <span class="text-dark">Elysie</span> Aesthetics
+            </h1>
+        </a>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="{% url 'homepage' %}"
+                    class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                <!-- <a href="{% url 'aboutUs' %}" class="nav-item nav-link">About</a> -->
+                <a href="{% url 'products' %}"
+                    class="nav-item nav-link {% if request.path == '/products/' %}active{% endif %}">Products</a>
+                <a href="{% url 'contacts' %}" class="nav-item nav-link ">Contacts</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Navbar End -->
+
+<body>
+
+
+    <!-- Header Start -->
+    <div class="jumbotron bg-jumbotron">
+        <div class="container text-center py-2">
+            <h3 class="text-white display-3 mb-0">Products</h3>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="far fa-circle px-3"></i>
+                <p class="m-0">Products</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+    <!-- Include Bootstrap 5 (required) -->
+
+
+    <style>
+        /* Optional enhancements */
+        .nav-pills .nav-link {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #f1f1f1;
+            color: #000;
+        }
+
+        .product-box {
+            background-color: #f5f5f5;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+
+
+    <div class="container-fluid">
+        <!-- Top Horizontal Product Tabs -->
+        <div class="row">
+            <div class="col-20" id="product-section">
+                <div class="rounded-2 product-tabContent" style="background-color: #c9e6e6; padding: 10px;">
+                    <div class="nav nav-pills d-flex flex-wrap gap-1 justify-content-start align-items-center"
+                        id="product-tabs" role="tablist" style="row-gap: 6px;">
+                        <button class="nav-link active text-nowrap px-2 py-1 small" id="product1-tab"
+                            data-bs-toggle="pill" data-bs-target="#product1" type="button" role="tab"
+                            aria-controls="product1" aria-selected="true">
+                            ✨ KOREAN SALMON DNA GOLD PDRN MEDIFACIAL
+                        </button>
+                        <button class="nav-link text-nowrap px-2 py-1 small" id="product2-tab" data-bs-toggle="pill"
+                            data-bs-target="#product2" type="button" role="tab" aria-controls="product2"
+                            aria-selected="false">
+                            💧 GFCCELL™ EXO VITAL
+                        </button>
+                        <button class="nav-link text-nowrap px-2 py-1 small" id="product3-tab" data-bs-toggle="pill"
+                            data-bs-target="#product3" type="button" role="tab" aria-controls="product3"
+                            aria-selected="false">
+                            ✨ GFCCELL™ EXO SCALP
+                        </button>
+                        <button class="nav-link text-nowrap px-2 py-1 small" id="product4-tab" data-bs-toggle="pill"
+                            data-bs-target="#product4" type="button" role="tab" aria-controls="product4"
+                            aria-selected="false">
+                            🧴 Total Care Solutions
+                        </button>
+                        <button class="nav-link text-nowrap px-2 py-1 small" id="product5-tab" data-bs-toggle="pill"
+                            data-bs-target="#product5" type="button" role="tab" aria-controls="product5"
+                            aria-selected="false">
+                            💡 DR DRAWING COOLING GEL MASK
+                        </button>
+                        <button class="nav-link text-nowrap px-2 py-1 small" id="product6-tab" data-bs-toggle="pill"
+                            data-bs-target="#product6" type="button" role="tab" aria-controls="product6"
+                            aria-selected="false">
+                            ✨ SALMON D.N.A PDRN
+                        </button>
+                        <button class="nav-link text-nowrap px-2 py-1 small" id="product7-tab" data-bs-toggle="pill"
+                            data-bs-target="#product7" type="button" role="tab" aria-controls="product7"
+                            aria-selected="false">
+                            💡 E.G.F WHITENING
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Right Side: Product Content -->
+            <div class="">
+                <div class="tab-content" id="product-tabContent">
+                    <div class="tab-pane fade show active " id="product1" role="tabpanel"
+                        aria-labelledby="product1-tab">
+                        <!-- Product 1 -->
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">BUBBLE FOAM</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Mild and rich Microbubbles cleanse your skin from deep inside and help moisturize.
+                                </p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Water, Coco-Betaine, Capryl/Capramidopropyl Betaine, Decyl Glucoside, Glycerin,
+                                    Phellinus Linteus Extract, Perilla Frutescens Leaf Extract, Scutellaria Baicalensis
+                                    Root Extract, Red Ginseng Extract, Pueraria Lobata Root Extract, Schizonepeta
+                                    Tenuifolia Extract, 1, 2-Hexanediol, Potassium Cocoyl Glycinate, Sodium Methyl
+                                    Cocoyl Taurate, Phenoxyethanol, Disodium EDTA, Fragrance.
+                                </p>
+                            </div>
+                            <div class="animatedImageSlider"
+                                style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                <img src="{% static 'img/bubblefoam.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                <img src="{% static 'img/bubb2.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+                            </div>
+                        </div>
+
+
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #c9e6e6; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">DR DRAWING</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    This product exfoliates the skin before a procedure in order to improve the result
+                                    of the procedure. It also helps to moisturize and whiten the treatment area.
+                                </p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    AQUA, Cellulose, Carbomer, Arginine, Polysorbate 80, Anthemis Nobilis Flower
+                                    Extract, Hamamelis Virginiana Extract, Aloe Barbadensis Leaf Extract, Centella
+                                    Asiatica Extract, Rosa Centifolia Flower Water, Camellia Sinensis Leaf Extract,
+                                    Phenoxyethanol, Disodium EDTA, Fragrance.
+                                </p>
+                            </div>
+                            <div class="animatedImageSlider"
+                                style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                <img src="{% static 'img/drawing1.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                <img src="{% static 'img/drawing2.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+                            </div>
+                        </div>
+
+                        <!--product 1.2-->
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">SALMON DNA PDRN + GOLD</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    The strongest combination of ingredients — combination of ocean-going salmon extract
+                                    and 24k gold powder.
+                                </p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Hyaluronic Acid, Aloe Vera, Green Tea, Glycerin, Niacinamide, Cica, EGF, Allantoin,
+                                    Centella Asiatica,
+                                    Panthenol, PDRN, 24k gold + 45 Powerful Ingredients.
+                                </p>
+                            </div>
+                            <div class="animatedImageSlider"
+                                style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                <img src="{% static 'img/sd_control.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                <img src="{% static 'img/sdcontrol1.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+                            </div>
+                        </div>
+
+                        <!--product 1.3-->
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #c9e6e6; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">DR. DRAWING COOLING GEL MASK
+                                </h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">• Soothing • Cooling</p>
+                                <p style="line-height: 1.6; color: #555;">• Moisturizing • Protection Layer</p>
+                                <p style="line-height: 1.6; color: #555;">• Perfect solution of skin soothing &
+                                    moisturizing with fresh cooling effect.</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Hydrolyzed Collagen, Centella, Vitamin B5, Centella Asiatica, Panthenol, EGF,
+                                    Dipotassium Glycyrrhizate, Beta-Glucan + Other Powerful Ingredients.
+                                </p>
+                            </div>
+                            <div class="animatedImageSlider"
+                                style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                <img src="{% static 'img/cooling_gel.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                <img src="{% static 'img/cooling_gel1.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+                            </div>
+                        </div>
+
+                        <!--product 1.4-->
+
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="tab-pane fade" id="product2" role="tabpanel" aria-labelledby="product2-tab">
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">GFCCELL™ EXO VITAL 9403
+                                    POWDER
+                                </h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">• [1st agent | Freeze dried human adipose stem
+                                    cell conditioned media]</p>
+                                <p style="line-height: 1.6; color: #555;">• Human Adipose Stem Cell Conditioned Media.
+                                </p>
+                                <p style="line-height: 1.6; color: #555;">• Camellia callus Exosome : Skin
+                                    anti-inflammatory effect by inhibiting nitric oxide.</p>
+                                <p style="line-height: 1.6; color: #555;">• Take care of young and healthy skin with
+                                    concentrated nutrition to skin that begins to age.</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Human Adipose Stromal Cell Conditioned Media(94%), Camellia Japonica Callus
+                                    Extracellular Vesicles(3%),
+                                    Mannitol.
+                                </p>
+                            </div>
+                            <div class="col-lg-5 text-center">
+                                <img src="{% static 'img/gfcell1.jpg' %}" class="img-fluid shadow"
+                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                            </div>
+                        </div>
+                        <!--prodct 2.2-->
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #c9e6e6; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">GFCCELL™ EXO VITAL Pep8
+                                    SOLUTION
+                                </h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">• Combination of 8 kinds of peptides for
+                                    anti-aging, anti-wrinkle and whitening effects.</p>
+                                <p style="line-height: 1.6; color: #555;">• Care of firm elasticity with synergy of
+                                    Exosome and peptide to the skin that start to age.
+                                </p>
+                                <p style="line-height: 1.6; color: #555;">• Anti-oxidant effect UP by containing various
+                                    skin active ingredients such as Adenosine,
+                                    Collagen and Panthenol.</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Water, Butylene Glycol, Glycerin, Copper Tripeptide-1, Tripepride-1, Acetyl
+                                    Hexapeptide-8, Hexapeptide-9,
+                                    Palmitoyl Pentapeptide-4, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1,
+                                    Nonapeptide-1, Sodium Hyaluronate,
+                                    Niacinamide, Adenosine, Collagen, Panthenol, Tranexamic Acid, Glutathione, Glucose,
+                                    Sodium PCA, Sodium lactate,
+                                    Arginine, Aspartic Acid, PCA, Glycine, Alanine, Serine, Valine, Proline, Threonine,
+                                    Isoleucine, Histidine, Phenylalanine,
+                                    Caprylyl Glycol, 1,2-Hexanediol.
+                                </p>
+                            </div>
+                            <div class="col-lg-5 text-center">
+                                <img src="{% static 'img/gfcell2.jpg' %}" class="img-fluid shadow"
+                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 3-->
+                    <div class="tab-pane fade" id="product3" role="tabpanel" aria-labelledby="product3-tab">
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">GFCCELL™ EXO SCALP 9700
+                                    POWDER
+                                </h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">• LEUCO-EXO : Exosome derived from new
+                                    proprietary lactic acid bacteria isolated
+                                    from healthy scalp of 10s~20s(Leuconostoc GFC1203H).</p>
+                                <p style="line-height: 1.6; color: #555;">• Improve to healthy scalp through cluster
+                                    change of scalp resident flora</p>
+                                <p style="line-height: 1.6; color: #555;">• Hair growth effect through hair papilla cell
+                                    proliferation and suppression of scalp
+                                    inflammation through activation of anti-inflammation.</p>
+                                <p style="line-height: 1.6; color: #555;">• Take care of young and healthy skin with
+                                    concentrated nutrition to skin that begins to age.</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Leuconostoc/Radish Root Ferment(97%), Mannitol.
+                                </p>
+                            </div>
+                            <div class="col-lg-5 text-center">
+                                <img src="{% static 'img/gfcell_h1.jpg' %}" class="img-fluid shadow"
+                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                            </div>
+                        </div>
+                        <!--prodct 3-->
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #c9e6e6; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">GFCCELL™ EXO SCALP Pep9
+                                    SOLUTION
+                                </h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">• Combination of 9 kinds of Peptides for
+                                    anti-aging, anti-wrinkle, anti-hair loss and hair papilla cell proliferation.</p>
+                                <p style="line-height: 1.6; color: #555;">• Care of rich hair and healthy scalp with
+                                    synergy of Exosome and Peptides to the scalp.
+                                </p>
+                                <p style="line-height: 1.6; color: #555;">• Anti-oxidant effect UP by containing various
+                                    skin active ingredients such as sodium hyaluronate, caffeine and
+                                    panthenol.</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Water, Butylene Glycol, Glycerin, Copper Tripeptide-1, Tripepride-1, Acetyl
+                                    Hexapeptide-8, Hexapeptide-9, Palmitoyl
+                                    Pentapeptide-4, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Nonapeptide-1,
+                                    Alanine/Histidine/Lysine Polypeptide Copper HCL, Sodium
+                                    Hyaluronate, Caffein, Panthenol, Tranexamic Acid, Glutathione, Glucose, Sodium PCA,
+                                    Sodium lactate, Arginine, Aspartic Acid, PCA, Glycine,
+                                    Alanine, Serine, Valine, Proline, Threonine, Isoleucine, Histidine, Phenylalanine,
+                                    Pentylene glycol, Polyglyceryl-10 laurate, Caprylyl Glycol, 1,2-
+                                    Hexanediol.
+                                </p>
+                            </div>
+                            <div class="col-lg-5 text-center">
+                                {% load static %}
+                                <img src="{% static 'img/gfcell_h2.jpg' %}" class="img-fluid shadow"
+                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Product 4-->
+                    <div class="tab-pane fade" id="product4" role="tabpanel" aria-labelledby="product4-tab">
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">Total Care Solution
+                                    Multi-effect Ampoule</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">Black Head Remover, Dark Circles, Moisturizer,
+                                    Skin Revitalizer,
+                                    Anti-wrinkle, Anti-Allergy, Anti-aging, Whitening, Rejuvenating</p>
+                                <p style="line-height: 1.6; color: #555;">#Glow Skin</p>
+                                <p style="line-height: 1.6; color: #555;">#Multi-Effect</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    LAloe Vera, AHA, Niacinamide, Kojic Acid, Collagen, Centella Asiatica,
+                                    PDRN, E.G.F / Peptide, Hyaluronic acid, Vegan, Chemical, Peptides, Centella
+                                    Asiatica, Aloe Barbadensis Leaf, Niacinamide, PDRN,
+                                </p>
+                            </div>
+                            <div class="col-lg-5 d-flex justify-content-center align-items-center">
+                                {% load static %}
+                                <div class="animatedImageSlider"
+                                    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                    <img src="{% static 'img/t4.jpg' %}" class="img-fluid slider-img"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                    <img src="{% static 'img/totalcare.jpg' %}" class="img-fluid slider-img"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--prod 5-->
+                    <div class="tab-pane fade" id="product5" role="tabpanel" aria-labelledby="product5-tab">
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">Skin Control Mask</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">Dewy Moisturizer</p>
+                                <p style="line-height: 1.6; color: #555;">Cooling and Soothing</p>
+                                <p style="line-height: 1.6; color: #555;">Skin Protection</p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    Hydrolyzed Collagen, Dipotassium Glycyrrhizate, Beta-Glucan
+                                </p>
+                            </div>
+                            {% load static %}
+                            <div class="col-lg-5 text-center">
+                                <img src="{% static 'img/mask.jpeg' %}" class="img-fluid shadow"
+                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--prod 6-->
+                    <div class="tab-pane fade" id="product6" role="tabpanel" aria-labelledby="product6-tab">
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">SALMON D.N.A PDRN</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">Solving fundamental skin problems</p>
+                                <p style="line-height: 1.6; color: #555;">Skin Rejevenation</p>
+                                <p style="line-height: 1.6; color: #555;">Anti - Aging</p>
+                                <p style="line-height: 1.6; color: #555;">Has ability to attract and retian moisture in
+                                    the skin, helping
+                                    people with dry skin.
+                                </p>
+                                <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">
+                                    AQUA,Sodium Hyaluronate, Butylene Glycol,Methy|propanediol, Glycerine, Niacinamide,
+                                    Trehalose, Betaine, Hydrolyzed Collagen, Panthenol,Dipotassium Glycyrrhizate,
+                                    Adenosine,Beta-Glucan,Honey Extract,Camellia Sinensis Leaf Extract,Rosa Centifolia
+                                    Flower Water,Centella Asiatica Extract,Anthemis Nobilis Flower Extract, Hamamelis
+                                    Virginiana Extract, Aloe Barbadensis Leaf Extract,Palmitoyl Pentapeptide-4,Acetyl
+                                    Hexapeptide-8,Copper Tripeptide-1,1,2-Hexanediol, Glycine Max (Soybean)
+                                    Phytoplacenta Conditioned Media, Sodium DNA (PDRN),Polysorbate 20,Allantoin,
+                                    Phenoxyethanol,Disodium EDTA,Fragrance.
+                                </p>
+                            </div>
+                            {% load static %}
+                            <div class="animatedImageSlider"
+                                style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                <img src="{% static 'img/rej3.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                <img src="{% static 'img/rej2.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+                                <img src="{% static 'img/rej4.jpeg' %}" class="img-fluid slider-img"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+                            </div>
+
+                        </div>
+                        <!--prod 61.-->
+
+
+                    </div>
+
+                    <!--prod 7-->
+                    <div class="tab-pane fade" id="product7" role="tabpanel" aria-labelledby="product7-tab">
+                        <div class="row gx-4 py-4 product-box"
+                            style="background-color: #f0f7fa; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 20px; align-items: center;">
+                            <div class="col-lg-7 text-start pe-lg-5">
+                                <h3 class="mb-4" style="font-weight: 700; color: #2c3e50;">E.G.F WHITENING</h3>
+                                <p><strong style="color: #16a085;">FEATURES:</strong></p>
+                                <p style="line-height: 1.6; color: #555;">Solving fundamental skin problems</p>
+                                <p style="line-height: 1.6; color: #555;">Targeting to erase skin age by filling gaps of
+                                    EGF in the skin that
+                                    has disappeared.
+                                </p>
+                                <p style="line-height: 1.6; color: #555;">Sking whitening and skin Anti - Aging</p>
+                                <p style="line-height: 1.6; color: #555;">Has ability to attract and retian moisture in
+                                    the skin, helping
+                                    people with dry skin.
+                                </p>
+                                <!-- <p><strong style="color: #16a085;">INGREDIENTS:</strong></p>
+                            <p style="line-height: 1.6; color: #555;">
+                                Hydrolyzed Collagen, Dipotassium Glycyrrhizate, Beta-Glucan
+                            </p> -->
+                            </div>
+                            <div class="col-lg-5 d-flex justify-content-center align-items-center">
+                                {% load static %}
+                                <div class="animatedImageSlider"
+                                    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+
+                                    <img src="{% static 'img/white.jpeg' %}" class="img-fluid slider-img"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+
+                                    <img src="{% static 'img/white2.jpeg' %}" class="img-fluid slider-img"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+                                    <img src="{% static 'img/white3.jpeg' %}" class="img-fluid slider-img"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6 pr-lg-5 mb-5">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="mb-3 text-white"><span class="text-primary">ELYSIE</span> AESTHETICS</h1>
+                    </a>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Kalkaji, New Delhi, India-110019</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 9205983794, +91 9140535076</p>
+                    <p><i class="fa fa-envelope mr-2"></i>elysieaesthetics@gmail.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square"
+                            href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <div class="row">
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our
+                                    products</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Our products</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>KOREAN
+                                    SALMON DNA GOLD PDRN MEDIFACIAL</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>GFCCELL™
+                                    EXO VITAL</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>GFCCELL™
+                                    EXO SCALP</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>TOTAL CARE
+                                    SOLUTIONS</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>E.G.F
+                                    WHITENING</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>SALMON D.N.A
+                                    PDRN</a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-light" style="padding: 30px;"
+                                        placeholder="Your Email Address">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary px-4">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top py-4"
+        style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">ELYSIE AESTHETIC</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p class="m-0 text-white">Designed by <a href="elysieaesthetics@gmail.com">ELYSIE</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    {% load static %}
+
+    <!-- External Libraries from CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Local Libraries served via Django static -->
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+    {% load static %}
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    {% load static %}
+    <script>
+        const STATIC_URL = "{% static '' %}";
+
+        const productData = {
+            product1: {
+                name: "Facial Cleanser",
+                description: "Gentle foaming cleanser for daily use, removes impurities without drying skin.",
+                image: STATIC_URL + "img/products/cleanser.jpg"
+            },
+            product2: {
+                name: "Vitamin C Serum",
+                description: "Brightens skin and reduces dark spots with 20% Vitamin C and hyaluronic acid.",
+                image: STATIC_URL + "img/products/vitamin-c.jpg"
+            },
+            product3: {
+                name: "Hydrating Toner",
+                description: "Balances pH and refreshes skin with natural rose water and witch hazel.",
+                image: STATIC_URL + "img/products/toner.jpg"
+            }
+        };
+    </script>
+
+
+
+
+    <script>
+        document.querySelectorAll('#product-tabs .nav-link').forEach(button => {
+            button.addEventListener('click', function () {
+                setTimeout(() => {
+                    const section = document.getElementById('product-section');
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 150);
+            });
+        });
+    </script>
+    <script>
+        const sliders = document.querySelectorAll(".animatedImageSlider");
+
+        sliders.forEach(slider => {
+            const images = slider.querySelectorAll(".slider-img");
+            let currentIndex = 0;
+            let interval = setInterval(changeImage, 2000);
+
+            function changeImage() {
+                images[currentIndex].style.opacity = 0;
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.opacity = 1;
+            }
+
+            slider.addEventListener('mouseenter', () => clearInterval(interval));
+            slider.addEventListener('mouseleave', () => {
+                interval = setInterval(changeImage, 2000);
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

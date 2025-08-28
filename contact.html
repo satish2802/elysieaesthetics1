@@ -1,0 +1,315 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ELYSIE AESTHETICS</title>
+    <link rel="icon" type="jpg" href="{% static 'img/page-2.jpg' %}">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light d-none d-lg-block">
+    <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-left mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center">
+                <small><i class="fa fa-phone-alt mr-2"></i>+91-9719966289</small>
+                <small class="px-3">|</small>
+                <small><i class="fa fa-envelope mr-2"></i>elysieaesthetics@gmail.com</small>
+            </div>
+        </div>
+        <div class="col-lg-6 text-right">
+            <div class="d-inline-flex align-items-center">
+                <a class="text-primary px-2" href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="text-primary px-2" href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="text-primary px-2" href="">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="text-primary px-2" href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="text-primary pl-2" href="">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="{% url 'homepage' %}" class="navbar-brand d-flex align-items-center ms-2 ms-lg-3">
+            <img src="{% static 'img/page-2.jpg' %}" alt="Company Logo"
+                style="border-radius: 6px; max-width: 100%;height: 60px; width: auto; margin-right: 10px ;">
+            <h1 class="m-0 text-primary">
+                <span class="text-dark">Elysie</span> Aesthetics
+            </h1>
+        </a>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="{% url 'homepage' %}"
+                    class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                <!-- <a href="{% url 'aboutUs' %}" class="nav-item nav-link">About</a> -->
+                <a href="{% url 'products' %}" class="nav-item nav-link">Products</a>
+                <!-- <a href="{% url 'price' %}" class="nav-item nav-link">Pricing</a> -->
+                <div class="nav-item dropdown">
+                    <!-- Dropdown items if needed -->
+                </div>
+                <a href="{% url 'contacts' %}"
+                    class="nav-item nav-link {% if request.path == '/contacts/' %}active{% endif %}">Contacts</a>
+            </div>
+            <!-- <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a> -->
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+<body>
+<!-- बाकी content वैसा ही रहे -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron bg-pricing">
+        <div class="container text-center py-2">
+            <h3 class="text-white display-3 mb-0">Contact</h3>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="far fa-circle px-3"></i>
+                <p class="m-0">Contact</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid">
+        <div class="container bg-custom rounded-4 p-4 p-md-5">
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase">Get In Touch</h6>
+                <h1 class="display-5 fw-bold">We’d Love to Hear From You</h1>
+                <p class="lead text-muted">Have questions or need more information? Our team is here to help.</p>
+            </div>
+
+            <!-- Map + Form -->
+            <div class="row g-4 align-items-stretch">
+                <!-- Map -->
+                <div class="col-lg-6">
+                    <div class="rounded-4 shadow-sm overflow-hidden h-100">
+                        <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=..." frameborder="0"
+                            style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div
+                        class="bg-white rounded-4 shadow-sm p-4 p-lg-5 h-100 d-flex flex-column justify-content-center">
+                        <h2 class="mb-3 text-dark">Contact Us</h2>
+                        <p class="text-muted mb-4">Fill out the form below and we’ll get back to you as soon as
+                            possible.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg rounded-3"
+                                    placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg rounded-3"
+                                    placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg rounded-3" placeholder="Subject"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control form-control-lg rounded-3" rows="4" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <button class="btn btn-primary btn-lg w-100 rounded-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info Boxes -->
+            <div class="row mt-5 g-4 text-center">
+                <div class="col-md-4">
+                    <div class="bg-white p-4 shadow-sm rounded-4 h-100">
+                        <i class="fa fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                        <h5 class="mb-2">Our Office</h5>
+                        <p class="mb-0">Kalkaji, New Delhi, India-110019</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 shadow-sm rounded-4 h-100">
+                        <i class="fa fa-phone-alt fa-2x text-primary mb-3"></i>
+                        <h5 class="mb-2">Call Us</h5>
+                        <p class="mb-0">+91 9205983794<br>+91 9140535076</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 shadow-sm rounded-4 h-100">
+                        <i class="fa fa-envelope fa-2x text-primary mb-3"></i>
+                        <h5 class="mb-2">Email Us</h5>
+                        <p class="mb-0">elysieaesthetics@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Optional: Custom style -->
+    <style>
+        .bg-custom {
+            background-color: #e3f6f5;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6 pr-lg-5 mb-5">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="mb-3 text-white"><span class="text-primary">ELYSIE</span> AESTHETICS</h1>
+                    </a>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Kalkaji, New Delhi, India-110019</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 9205983794, +91 9140535076</p>
+                    <p><i class="fa fa-envelope mr-2"></i>elysieaesthetics@gmail.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square" href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
+                    target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <div class="row">
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our
+                                    products</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Our products</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>KOREAN
+                                    SALMON DNA GOLD PDRN MEDIFACIAL</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>GFCCELL™
+                                    EXO VITAL</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>GFCCELL™
+                                    EXO SCALP</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>TOTAL CARE
+                                    SOLUTIONS</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>E.G.F
+                                    WHITENING</a>
+                                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>SALMON D.N.A
+                                    PDRN</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-light" style="padding: 30px;"
+                                        placeholder="Your Email Address">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary px-4">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top py-4"
+        style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">ELYSIE AESTHETIC</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p class="m-0 text-white">Designed by <a href="elysieaesthetics@gmail.com">ELYSIE</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
