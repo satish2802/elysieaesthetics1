@@ -63,40 +63,45 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 <!-- Topbar Start -->
-<div class="container-fluid bg-light d-none d-lg-block">
+<div class="container-fluid bg-light d-none d-lg-block border-bottom shadow-sm">
     <div class="row py-2 px-lg-5">
+        <!-- Left Side -->
         <div class="col-lg-6 text-left mb-2 mb-lg-0">
-            <div class="d-inline-flex align-items-center">
-                <small><i class="fa fa-phone-alt mr-2"></i>+91-9205983794</small>
-                <small class="px-3">|</small>
-                <small><i class="fa fa-envelope mr-2"></i>elysieaesthetics@gmail.com</small>
+            <div class="d-inline-flex align-items-center text-dark small">
+                <span class="mr-3">
+                    <i class="fa fa-phone-alt mr-2 text-primary"></i> +91-9205983794
+                </span>
+                <span>
+                    <i class="fa fa-envelope mr-2 text-primary"></i> elysieaesthetics@gmail.com
+                </span>
             </div>
         </div>
+
+        <!-- Right Side -->
         <div class="col-lg-6 text-right">
             <div class="d-inline-flex align-items-center">
-                <a class="text-primary px-2" href="">
+                <a class="px-2" href="" style="color:#3b5998;">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="text-primary px-2" href="">
+                <a class="px-2" href="" style="color:#1da1f2;">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="text-primary px-2" href="">
+                <a class="px-2" href="" style="color:#0077b5;">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a class="text-primary px-2"
-                    href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
-                    target="_blank" rel="noopener noreferrer">
+                <a class="px-2" href="https://www.instagram.com/elysieaesthetics?igsh=b2UyMm52MW12ZmNo&utm_source=qr"
+                   target="_blank" rel="noopener noreferrer" 
+                   style="color:#e1306c;">
                     <i class="fab fa-instagram"></i>
                 </a>
-
-                </a>
-                <a class="text-primary pl-2" href="">
+                <a class="pl-2" href="" style="color:#ff0000;">
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Topbar End -->
 
 <!-- Navbar Start -->
@@ -115,10 +120,12 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
             <div class="navbar-nav m-auto py-0">
-                <a href="{% url 'homepage' %}"
-                    class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+<!--                 <a href="{% url 'homepage' %}"
+                    class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a> -->
                 <!-- <a href="{% url 'aboutUs' %}" class="nav-item nav-link">About</a> -->
-                <a href="{% url 'products' %}" class="nav-item nav-link">Products</a>
+<!--                 <a href="{% url 'products' %}" class="nav-item nav-link">Products</a> -->
+                <a href="products.html" class="nav-item nav-link">Products</a>
                 <!-- <a href="{% url 'price' %}" class="nav-item nav-link">Pricing</a> -->
                 <div class="nav-item dropdown">
                     <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a> -->
@@ -129,7 +136,8 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         </div> -->
                 </div>
-                <a href="{% url 'contacts' %}" class="nav-item nav-link ">Contacts</a>
+<!--                 <a href="{% url 'contacts' %}" class="nav-item nav-link ">Contacts</a> -->
+                <a href="contacts.html" class="nav-item nav-link ">Contacts</a>
             </div>
             <!-- <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a> -->
         </div>
@@ -161,8 +169,7 @@
                     rel="stylesheet">
 
                 <div class="carousel-item position-relative active" style="min-height: 70vh;">
-                    <!-- <img class="position-absolute w-100 h-100" src="{% static 'img/3.jpg' %}"
-                        style="object-fit: cover;"> -->
+                    
                     <img class="position-absolute w-100 h-100" src="static/img/3.jpg" style="object-fit: cover;">
 
 
