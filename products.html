@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=1200">
     <title>ELYSIE AESTHETICS</title>
     <link rel="icon" type="image/jpg" href="static/img/page-2.jpg">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -388,6 +389,7 @@
                                     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
+                        <iframe src="static/img/ELYSIE CATELOG.pdf" width="100%" height="800px" style="border:none;"></iframe>
                     </div>
                     <!--Product 3-->
                     <div class="tab-pane fade" id="product3" role="tabpanel" aria-labelledby="product3-tab">
@@ -724,73 +726,93 @@
 
     
 
-    <!-- Contact Javascript File -->
-    <script src="static/mail/jqBootstrapValidation.min.js"></script>
-    <script src="static/mail/contact.js"></script>
+        <!-- Contact Javascript File -->
+        <script src="static/mail/jqBootstrapValidation.min.js"></script>
+        <script src="static/mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="static/js/main.js"></script>
-
-
-    
-    <script>
-        const STATIC_URL = "static/";
-
-        const productData = {
-            product1: {
-                name: "Facial Cleanser",
-                description: "Gentle foaming cleanser for daily use, removes impurities without drying skin.",
-                image: STATIC_URL + "img/products/cleanser.jpg"
-            },
-            product2: {
-                name: "Vitamin C Serum",
-                description: "Brightens skin and reduces dark spots with 20% Vitamin C and hyaluronic acid.",
-                image: STATIC_URL + "img/products/vitamin-c.jpg"
-            },
-            product3: {
-                name: "Hydrating Toner",
-                description: "Balances pH and refreshes skin with natural rose water and witch hazel.",
-                image: STATIC_URL + "img/products/toner.jpg"
-            }
-        };
-    </script>
+        <!-- Template Javascript -->
+        <script src="static/js/main.js"></script>
 
 
+        
+        <script>
+            const STATIC_URL = "static/";
+
+            const productData = {
+                product1: {
+                    name: "Facial Cleanser",
+                    description: "Gentle foaming cleanser for daily use, removes impurities without drying skin.",
+                    image: STATIC_URL + "img/products/cleanser.jpg"
+                },
+                product2: {
+                    name: "Vitamin C Serum",
+                    description: "Brightens skin and reduces dark spots with 20% Vitamin C and hyaluronic acid.",
+                    image: STATIC_URL + "img/products/vitamin-c.jpg"
+                },
+                product3: {
+                    name: "Hydrating Toner",
+                    description: "Balances pH and refreshes skin with natural rose water and witch hazel.",
+                    image: STATIC_URL + "img/products/toner.jpg"
+                }
+            };
+        </script>
 
 
-    <script>
-        document.querySelectorAll('#product-tabs .nav-link').forEach(button => {
-            button.addEventListener('click', function () {
-                setTimeout(() => {
-                    const section = document.getElementById('product-section');
-                    if (section) {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }, 150);
+
+
+        <script>
+            document.querySelectorAll('#product-tabs .nav-link').forEach(button => {
+                button.addEventListener('click', function () {
+                    setTimeout(() => {
+                        const section = document.getElementById('product-section');
+                        if (section) {
+                            section.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 150);
+                });
             });
-        });
-    </script>
-    <script>
-        const sliders = document.querySelectorAll(".animatedImageSlider");
+        </script>
+        <script>
+            const sliders = document.querySelectorAll(".animatedImageSlider");
 
-        sliders.forEach(slider => {
-            const images = slider.querySelectorAll(".slider-img");
-            let currentIndex = 0;
-            let interval = setInterval(changeImage, 2000);
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll(".slider-img");
+                let currentIndex = 0;
+                let interval = setInterval(changeImage, 2000);
 
-            function changeImage() {
-                images[currentIndex].style.opacity = 0;
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].style.opacity = 1;
-            }
+                function changeImage() {
+                    images[currentIndex].style.opacity = 0;
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].style.opacity = 1;
+                }
 
-            slider.addEventListener('mouseenter', () => clearInterval(interval));
-            slider.addEventListener('mouseleave', () => {
-                interval = setInterval(changeImage, 2000);
+                slider.addEventListener('mouseenter', () => clearInterval(interval));
+                slider.addEventListener('mouseleave', () => {
+                    interval = setInterval(changeImage, 2000);
+                });
             });
-        });
-    </script>
+        </script>
 
+        
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tab = new URLSearchParams(window.location.search).get("tab");
+  if (tab) {
+    const el = document.getElementById(tab + "-tab");
+    if (el) {
+      new bootstrap.Tab(el).show();
+      // scroll main content pe
+      setTimeout(() => {
+        const section = document.getElementById('product-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // thoda delay taki tab activate ho jaye
+    }
+  }
+});
+</script>
 
 
 </body>
